@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=PT+Sans:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.u-contenedor {
+  max-width: 120rem !important;
+  width: 95% !important;
+  margin: 0 auto !important;
+}
+
+.information {
+  padding: 1rem 0;
+  background-color: #4cd137;
+  font-size: 1.4rem;
+}
+
+.information__details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.information__details-item {
+  list-style: none;
+  color: #d4f4cf;
+}
+
+.information__details-item:not(:last-child) {
+  margin-right: 10rem;
+}
+
+.information__details-item span {
+  font-weight: 700;
+  color: #fff;
+}
+
+.information__social {
+  display: flex;
+}
+
+.information__social-item {
+  list-style: none;
+}
+
+.information__social-item:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.information__social-link {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.information .u-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

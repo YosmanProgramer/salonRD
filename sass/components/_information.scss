@@ -1,0 +1,43 @@
+.information {
+  padding: 1rem 0;
+  background-color: $primary-color;
+  font-size: 1.4rem;
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+
+    &-item {
+      list-style: none;
+      color: $primary-color-light;
+      &:not(:last-child) {
+        margin-right: 10rem;
+      }
+      span {
+        font-weight: 700;
+        color: $white-color;
+      }
+    }
+  }
+  &__social {
+    display: flex;
+
+    &-item {
+      list-style: none;
+      &:not(:last-child) {
+        margin-right: 3rem;
+      }
+    }
+    &-link {
+      text-decoration: none;
+      font-size: 2rem;
+      color: $white-color;
+    }
+  }
+}
+
+.information .u-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

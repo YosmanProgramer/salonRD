@@ -1,1 +1,30 @@
+// IMPORTS TYPOGRAPHYES STYLES
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=PT+Sans:wght@400;700&display=swap');
 
+// RESET PAGE SETTINGS
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+// HTML RESET FONTSIZE
+// 1rem = 16px
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px -> 16px/10px = 62.5%
+}
+
+// BODY SETTINGS DEFAULT
+body {
+  font-family: $body-typography, sans-serif;
+  font-size: $font-default;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+// ::selection {
+
+// }
