@@ -1,0 +1,21 @@
+{
+  "name": "salon-rd",
+  "version": "1.0.0",
+  "description": "Salón R&D, venta de productos, todo lo relacionado con la belleza.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "productos",
+    "belleza",
+    "venta",
+    "servicios"
+  ],
+  "author": "Yosman Andres Higuita Gonzalez",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
+}
