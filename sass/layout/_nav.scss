@@ -1,0 +1,42 @@
+.nav {
+  padding: 2.5rem 0;
+  background-color: $white-color;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    list-style: none;
+    &:not(:last-child) {
+      margin-right: 9rem;
+    }
+  }
+  &__link {
+    &:link,
+    &:visited {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: #444;
+      transition: color 0.3s;
+    }
+    &:hover,
+    &:active {
+      color: $primary-color;
+    }
+  }
+
+  &__link--active {
+    color: $primary-color !important;
+  }
+
+  &__logo {
+    height: 8rem;
+    width: auto;
+  }
+}
+
+.nav .u-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

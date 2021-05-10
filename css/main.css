@@ -26,7 +26,7 @@ body {
 }
 
 .information {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   background-color: #4cd137;
   font-size: 1.4rem;
 }
@@ -69,6 +69,50 @@ body {
 }
 
 .information .u-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  padding: 2.5rem 0;
+  background-color: #fff;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
+  list-style: none;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 9rem;
+}
+
+.nav__link:link, .nav__link:visited {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #444;
+  transition: color 0.3s;
+}
+
+.nav__link:hover, .nav__link:active {
+  color: #4cd137;
+}
+
+.nav__link--active {
+  color: #4cd137 !important;
+}
+
+.nav__logo {
+  height: 8rem;
+  width: auto;
+}
+
+.nav .u-contenedor {
   display: flex;
   justify-content: space-between;
   align-items: center;
