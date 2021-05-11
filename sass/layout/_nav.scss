@@ -1,6 +1,7 @@
 .nav {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   background-color: $white-color;
+  transition: all 0.3s;
   &__list {
     display: flex;
   }
