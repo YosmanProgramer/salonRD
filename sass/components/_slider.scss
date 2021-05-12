@@ -40,15 +40,25 @@
     cursor: pointer;
     transition: all 0.3s;
 
+    &:focus {
+      outline: none;
+    }
+
     &--left {
       left: 5%;
+      &:hover {
+        transform: translateX(-0.3rem);
+      }
     }
     &--right {
       right: 5%;
+      &:hover {
+        transform: translateX(0.3rem);
+      }
     }
 
     &:hover {
-      background-color: rgba($primary-color, 0.8);
+      background-color: rgba($primary-color, 0.4);
       color: $white-color;
     }
   }

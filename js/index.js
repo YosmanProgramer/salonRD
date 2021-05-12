@@ -1,13 +1,15 @@
 // ELEMENTOS
 const slides = document.querySelectorAll('.slider__item');
+const header = document.querySelector('.header');
+const nav = document.querySelector('.nav');
 
 // BOTONES
 const btnRight = document.querySelector('.slider__btn--right');
 const btnLeft = document.querySelector('.slider__btn--left');
+const btnUp = document.querySelector('.button--up');
 
 // Slider
 let curSlide = 0;
-let timer = 0;
 const maxSlide = slides.length;
 
 const goToSlide = function (slide) {
@@ -36,15 +38,40 @@ const prevSlide = function () {
   goToSlide(curSlide);
 };
 
-setInterval(() => {
-  if (curSlide === maxSlide - 1) {
-    curSlide = 0;
-  } else {
-    curSlide++;
+let timerSlide = setInterval(nextSlide, 10000);
+const resetTimerSlide = function () {
+  clearInterval(timerSlide);
+  timerSlide = setInterval(nextSlide, 10000);
+};
+
+// Sticky navigation and show btn up
+const headerObserver = new IntersectionObserver(
+  function (entries) {
+    const [entry] = entries;
+    if (!entry.isIntersecting) {
+      nav.classList.add('nav--sticky');
+      btnUp.classList.add('button--active');
+    } else {
+      nav.classList.remove('nav--sticky');
+      btnUp.classList.remove('button--active');
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
   }
-  goToSlide(curSlide);
-}, 10000);
+);
+headerObserver.observe(header);
 
 // EVENTS
-btnRight.addEventListener('click', nextSlide);
-btnLeft.addEventListener('click', prevSlide);
+btnRight.addEventListener('click', function () {
+  nextSlide();
+  resetTimerSlide();
+});
+btnLeft.addEventListener('click', function () {
+  prevSlide();
+  resetTimerSlide();
+});
+btnUp.addEventListener('click', function () {
+  document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
+});

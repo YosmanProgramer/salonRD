@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=PT+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=PT+Sans:wght@400;700&display=swap");
 *,
 *::before,
 *::after {
@@ -13,16 +13,42 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif, sans-serif;
+  font-family: "Open Sans", sans-serif, sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.7;
+  color: #333;
+}
+
+::selection {
+  color: #fff;
+  background-color: #4cd137;
+}
+
+.heading-secondary {
+  font-family: "PT Sans", sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+.heading-secondary::after {
+  content: '';
+  display: block;
+  width: 6rem;
+  height: 0.3rem;
+  margin: 0 auto;
+  background-color: #4cd137;
 }
 
 .u-contenedor {
   max-width: 120rem !important;
   width: 95% !important;
   margin: 0 auto !important;
+}
+
+.u-text-center {
+  text-align: center !important;
 }
 
 .banner {
@@ -33,32 +59,46 @@ body {
 
 .banner--1 {
   background-position: center;
-  background-image: linear-gradient(
-      to left bottom,
-      rgba(76, 209, 55, 0.6),
-      rgba(255, 255, 255, 0.6)
-    ),
-    url(../img/banner1-big.jpg);
+  background-image: linear-gradient(to left bottom, rgba(76, 209, 55, 0.6), rgba(255, 255, 255, 0.6)), url(../img/banner1-big.jpg);
 }
 
 .banner--2 {
   background-position: top;
-  background-image: linear-gradient(
-      to left bottom,
-      rgba(76, 209, 55, 0.6),
-      rgba(255, 255, 255, 0.6)
-    ),
-    url(../img/banner2-big.jpg);
+  background-image: linear-gradient(to left bottom, rgba(76, 209, 55, 0.6), rgba(255, 255, 255, 0.6)), url(../img/banner2-big.jpg);
 }
 
 .banner--3 {
   background-position: center;
-  background-image: linear-gradient(
-      to left bottom,
-      rgba(76, 209, 55, 0.6),
-      rgba(255, 255, 255, 0.6)
-    ),
-    url(../img/banner3-big.jpg);
+  background-image: linear-gradient(to left bottom, rgba(76, 209, 55, 0.6), rgba(255, 255, 255, 0.6)), url(../img/banner3-big.jpg);
+}
+
+.button--up {
+  position: fixed;
+  right: 3.5rem;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 2rem;
+  color: #fff;
+  background-color: #4cd137;
+  border-radius: 1rem;
+  border: none;
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button--active {
+  bottom: 3.5rem;
+  opacity: 1;
+}
+
+.button--active:hover {
+  transform: translateY(-0.5rem);
 }
 
 .information {
@@ -147,16 +187,28 @@ body {
   transition: all 0.3s;
 }
 
+.slider__btn:focus {
+  outline: none;
+}
+
 .slider__btn--left {
   left: 5%;
+}
+
+.slider__btn--left:hover {
+  transform: translateX(-0.3rem);
 }
 
 .slider__btn--right {
   right: 5%;
 }
 
+.slider__btn--right:hover {
+  transform: translateX(0.3rem);
+}
+
 .slider__btn:hover {
-  background-color: rgba(76, 209, 55, 0.8);
+  background-color: rgba(76, 209, 55, 0.4);
   color: #fff;
 }
 
@@ -168,7 +220,6 @@ body {
 .nav {
   padding: 1rem 0;
   background-color: #fff;
-  transition: all 0.3s;
 }
 
 .nav__list {
@@ -183,18 +234,20 @@ body {
   margin-right: 9rem;
 }
 
-.nav__link:link,
-.nav__link:visited {
+.nav__link:link, .nav__link:visited {
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  color: #333;
   text-decoration: none;
-  color: #444;
-  transition: color 0.3s;
+  transition: all 0.4s ease;
 }
 
-.nav__link:hover,
-.nav__link:active {
+.nav__link:hover, .nav__link:active {
   color: #4cd137;
+}
+
+.nav__link:focus {
+  outline: none;
 }
 
 .nav__link--active {
@@ -204,10 +257,33 @@ body {
 .nav__logo {
   height: 8rem;
   width: auto;
+  transition: all 0.4s ease;
+}
+
+.nav--sticky {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  width: 100%;
+  padding: 0.5rem 0;
+  box-shadow: 0 0.5px 1px rgba(76, 209, 55, 0.8);
+}
+
+.nav--sticky .nav__link {
+  font-size: 1.2rem;
+}
+
+.nav--sticky .nav__logo {
+  height: 6rem;
 }
 
 .nav .u-contenedor {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: auto;
+}
+
+.section {
+  padding: 8rem 0;
 }

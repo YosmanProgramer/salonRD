@@ -1,7 +1,6 @@
 .nav {
   padding: 1rem 0;
   background-color: $white-color;
-  transition: all 0.3s;
   &__list {
     display: flex;
   }
@@ -15,14 +14,17 @@
     &:link,
     &:visited {
       text-transform: uppercase;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
+      color: $black-color;
       text-decoration: none;
-      color: #444;
-      transition: color 0.3s;
+      transition: all 0.4s ease;
     }
     &:hover,
     &:active {
       color: $primary-color;
+    }
+    &:focus {
+      outline: none;
     }
   }
 
@@ -33,6 +35,25 @@
   &__logo {
     height: 8rem;
     width: auto;
+    transition: all 0.4s ease;
+  }
+
+  // NAV STICKY
+  &--sticky {
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    width: 100%;
+    padding: 0.5rem 0;
+    box-shadow: 0 0.5px 1px rgba($primary-color, 0.8);
+  }
+
+  &--sticky &__link {
+    font-size: 1.2rem;
+  }
+
+  &--sticky &__logo {
+    height: 6rem;
   }
 }
 
@@ -40,4 +61,5 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: auto;
 }

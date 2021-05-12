@@ -1,0 +1,35 @@
+.button {
+  &--up {
+    position: fixed;
+    right: 3.5rem;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+
+    width: 2rem;
+    height: 2rem;
+    padding: 2rem;
+
+    color: $white-color;
+    background-color: $primary-color;
+    border-radius: 1rem;
+    border: none;
+
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  &--active {
+    bottom: 3.5rem;
+    opacity: 1;
+
+    &:hover {
+      transform: translateY(-0.5rem);
+    }
+  }
+}
