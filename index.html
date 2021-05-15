@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="vendors/css/all.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <script defer src="js/index.js"></script>
     <title>Salón R&D</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="section--0">
       <div class="information">
         <div class="u-contenedor">
           <ul class="information__details">
@@ -48,25 +49,27 @@
         <div class="u-contenedor">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#" class="nav__link nav__link--active">Inicio</a>
+              <a href="#section--0" class="nav__link nav__link--active"
+                >Inicio</a
+              >
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Sobre mi</a>
+              <a href="#section--1" class="nav__link">Nosotros</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Servicios</a>
+              <a href="#section--2" class="nav__link">Servicios</a>
             </li>
           </ul>
           <img src="img/logo.JPG" alt="logotipo" class="nav__logo" />
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#" class="nav__link">Productos</a>
+              <a href="#section--3" class="nav__link">Productos</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Galería</a>
+              <a href="#section--4" class="nav__link">Galería</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Contacto</a>
+              <a href="#section--5" class="nav__link">Contacto</a>
             </li>
           </ul>
         </div>
@@ -83,16 +86,38 @@
         </div>
         <button class="slider__btn slider__btn--left">&leftarrow;</button>
         <button class="slider__btn slider__btn--right">&rightarrow;</button>
+        <div class="slider__dot"></div>
       </div>
     </header>
-    <section class="section">
+    <section class="section" id="section--1">
       <div class="u-contenedor">
-        <div class="u-text-center">
-          <h2 class="heading-secondary">Sobre Mi</h2>
+        <div class="u-text-center u-margin-bottom-big">
+          <h2 class="heading-secondary">Salón de belleza</h2>
+        </div>
+        <div class="about">
+          <div class="about__item">
+            <h3 class="about__title">Salón R&D</h3>
+            <p class="about__paragraph">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi,
+              suscipit ipsam! Molestiae, neque corrupti! Quod sapiente facere
+              tenetur, iusto culpa omnis atque? Quisquam ex deserunt fuga amet
+              maiores voluptatum, odio expedita, laborum optio, facilis facere
+              at.
+            </p>
+          </div>
+          <div class="about__item">
+            <img src="img/salon-foto.jpg" alt="Mi foto" class="about__photo" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="section--2">
+      <div class="u-contenedor">
+        <div class="u-text-center u-margin-bottom-big">
+          <h2 class="heading-secondary">Servicios</h2>
         </div>
       </div>
     </section>
     <button class="button button--up">&uparrow;</button>
-    <script src="js/index.js"></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
 // IMPORTS TYPOGRAPHYES STYLES
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=PT+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
 
 // RESET PAGE SETTINGS
 *,
@@ -19,9 +19,9 @@ html {
 
 // BODY SETTINGS DEFAULT
 body {
-  font-family: $body-typography, sans-serif;
+  font-family: $typography;
   font-size: $font-default;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.7;
   color: $black-color;
 }

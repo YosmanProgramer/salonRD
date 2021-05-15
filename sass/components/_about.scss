@@ -1,0 +1,31 @@
+.about {
+  display: grid;
+  column-gap: 4rem;
+  grid-template-columns: repeat(2, 1fr);
+
+  &__item:first-of-type {
+    padding: 5rem;
+    border: 1px solid $primary-color;
+  }
+
+  &__item {
+    height: 42rem;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  &__title {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  &__paragraph {
+  }
+
+  &__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+}

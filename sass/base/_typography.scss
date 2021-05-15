@@ -1,16 +1,24 @@
-.heading-secondary {
-  font-family: $heading-typography;
-  font-size: 3rem;
-
+.heading-secondary,
+.heading-tertiary {
+  font-family: $typography;
   text-transform: uppercase;
+  font-weight: 400;
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
   letter-spacing: 0.3rem;
 
   &::after {
     content: '';
     display: block;
     width: 6rem;
-    height: 0.3rem;
+    height: 0.2rem;
     margin: 0 auto;
     background-color: $primary-color;
   }
+}
+
+.heading-tertiary {
+  font-size: 1.8rem;
 }
