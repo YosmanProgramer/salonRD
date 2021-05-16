@@ -1,0 +1,16 @@
+.services {
+  display: grid;
+  gap: 5rem;
+  padding: 5rem;
+  grid-template-columns: repeat(4, 1fr);
+  border-radius: 1rem;
+  &__item {
+    list-style: none;
+    text-align: center;
+  }
+  &__icon {
+    height: 6rem;
+    width: auto;
+    margin-bottom: 0.5rem;
+  }
+}

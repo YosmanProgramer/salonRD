@@ -156,7 +156,7 @@ nav__list.forEach(function (list) {
       window.scrollTo({
         top:
           coordenadas.top -
-          Number.parseInt(paddingSection) +
+          Number.parseInt(paddingSection) / 2 +
           window.pageYOffset,
         left: coordenadas.left + window.pageXOffset,
         behavior: 'smooth',
