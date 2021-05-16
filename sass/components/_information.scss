@@ -3,9 +3,28 @@
   background-color: $primary-color;
   font-size: 1.4rem;
 
+  @include responsive(tab-hor) {
+    position: fixed;
+    right: 0;
+    top: -100%;
+    z-index: 500;
+    width: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: all 0.3s;
+
+    &--active {
+      top: 20%;
+    }
+  }
+
   &__details {
     display: flex;
     justify-content: space-between;
+
+    @include responsive(tab-hor) {
+      flex-direction: column;
+    }
 
     &-item {
       list-style: none;
@@ -40,4 +59,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include responsive(tab-hor) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

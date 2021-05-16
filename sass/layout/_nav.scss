@@ -3,11 +3,31 @@
   background-color: $white-color;
   &__list {
     display: flex;
-  }
-  &__item {
     list-style: none;
-    &:not(:last-child) {
-      margin-right: 9rem;
+
+    @include responsive(tab-hor) {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      z-index: 150;
+      background-color: $white-color;
+      transition: all 0.3s;
+
+      &--active {
+        right: 0;
+      }
+    }
+  }
+  &__item:not(:last-child) {
+    margin-right: 9rem;
+
+    @include responsive(tab-hor) {
+      margin-right: 0;
     }
   }
   &__link {
@@ -54,6 +74,112 @@
 
   &--sticky &__logo {
     height: 8rem;
+  }
+
+  &__menu {
+    display: none;
+    position: relative;
+    cursor: pointer;
+    z-index: 150;
+
+    @include responsive(tab-hor) {
+      display: block;
+
+      &--active {
+        position: fixed;
+        top: 4.4rem;
+        left: 2rem;
+        z-index: 200;
+      }
+    }
+  }
+
+  &__icon {
+    position: relative;
+
+    &,
+    &::before,
+    &::after {
+      display: block;
+      width: 4rem;
+      height: 0.4rem;
+      background-color: $primary-color;
+      transition: all 0.3s;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+
+    &::after {
+      top: 0.8rem;
+    }
+
+    &--active {
+      background-color: transparent;
+
+      &::before,
+      &::after {
+        top: 0;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__information {
+    &,
+    &::before,
+    &::after {
+      display: block;
+      width: 0.7rem;
+      height: 0.7rem;
+      background-color: $primary-color;
+      border-radius: 50%;
+      transition: top 0.3s;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+    }
+
+    &::before {
+      top: -1rem;
+    }
+
+    &::after {
+      top: 1rem;
+    }
+
+    &--active {
+      &::before {
+        top: 1rem;
+      }
+
+      &::after {
+        top: -1rem;
+      }
+    }
+
+    &--hidden {
+      visibility: hidden;
+    }
   }
 }
 

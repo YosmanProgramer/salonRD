@@ -2,6 +2,18 @@
   padding: 8rem 0;
   transition: all 1s;
 
+  @include responsive(tab-hor) {
+    padding: 7rem 0;
+  }
+
+  @include responsive(tab-ver) {
+    padding: 6rem 0;
+  }
+
+  @include responsive(phone) {
+    padding: 4rem 0;
+  }
+
   &--hidden {
     opacity: 0;
   }

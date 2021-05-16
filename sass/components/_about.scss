@@ -1,17 +1,29 @@
 .about {
   display: grid;
-  column-gap: 4rem;
+  gap: 4rem;
   grid-template-columns: repeat(2, 1fr);
+
+  @include responsive(tab-hor) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
   &__item:first-of-type {
     padding: 5rem;
     border: 1px solid $primary-color;
+
+    @include responsive(tab-hor) {
+      order: 1;
+    }
   }
 
   &__item {
     height: 42rem;
     border-radius: 1rem;
     overflow: hidden;
+
+    @include responsive(tab-hor) {
+      height: auto;
+    }
   }
 
   &__title {

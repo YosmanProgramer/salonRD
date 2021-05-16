@@ -28,4 +28,16 @@
   max-width: 70%;
   margin: 0 auto;
   text-align: center;
+
+  @include responsive(tab-hor) {
+    max-width: 80%;
+  }
+
+  @include responsive(tab-ver) {
+    max-width: 90%;
+  }
+
+  @include responsive(phone) {
+    max-width: 95%;
+  }
 }

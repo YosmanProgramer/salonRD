@@ -19,6 +19,10 @@
 
 .u-margin-bottom-big {
   margin-bottom: 8rem !important;
+
+  @include responsive(tab-hor) {
+    margin-bottom: 4rem !important;
+  }
 }
 
 .u-flex {

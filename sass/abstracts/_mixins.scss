@@ -1,0 +1,40 @@
+// RESPONSIVE WEB DESIGN - DESKTOP FIRST
+
+// celulares -> 0px - 600px
+// tablets verticales -> 600px - 900px
+// tablets horizontales -> 900px - 1200px
+// desktops -> 1200px - 1800px --------------- POR DEFECTO
+// pantallas grandes -> 1800px ----- INFINITO
+
+// Conversion de px a em :   16px -> 1em
+
+// ASIGNACION DE PARAMETROS PARA CADA ROMPIMIENTO (Breackpoint)
+// celulares -> phone 600px / 16px -> 37.5em
+// tablets verticales -> tab-ver 900px / 16px -> 56.25em
+// tablets horizontales -> tab-hor -> 1200px / 16px -> 75em
+// desktops -> POR DEFECTO
+// pantallas grandes -> big-desk -> 1800px / 16px -> 112.5em
+
+// IMPLEMENTACION DE LOS PUNTOS DE QUIEBRE
+@mixin responsive($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-ver {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-hor {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desk {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
