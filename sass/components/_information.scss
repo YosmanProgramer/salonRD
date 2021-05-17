@@ -5,8 +5,8 @@
 
   @include responsive(tab-hor) {
     position: fixed;
-    right: 0;
-    top: -100%;
+    right: -100%;
+    top: 15rem;
     z-index: 500;
     width: auto;
     padding: 1rem;
@@ -14,7 +14,7 @@
     transition: all 0.3s;
 
     &--active {
-      top: 20%;
+      right: 0;
     }
   }
 
