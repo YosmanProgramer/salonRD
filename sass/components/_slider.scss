@@ -15,7 +15,7 @@
   }
   &__btn {
     position: absolute;
-    top: 36%;
+    top: 50%;
     z-index: 20;
 
     display: flex;
@@ -62,7 +62,7 @@
   &__dot {
     position: absolute;
     left: 50%;
-    bottom: 20rem;
+    bottom: 8rem;
     transform: translateX(-50%);
 
     &-item {
