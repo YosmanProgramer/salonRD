@@ -35,7 +35,7 @@
     justify-content: center;
     text-align: center;
     color: $white-color;
-    background-color: rgba($primary-color, 0.6);
+    background-color: rgba($primary-color, 0.4);
     transition: all 0.3s ease;
 
     @include responsive(tab-hor) {

@@ -80,7 +80,7 @@
     border-radius: 1rem;
     text-transform: uppercase;
     color: $white-color;
-    background-color: $primary-color;
+    background-color: rgba($primary-color, 0.6);
     cursor: pointer;
   }
 }

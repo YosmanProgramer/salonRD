@@ -9,8 +9,8 @@
 
   background-image: linear-gradient(
       105deg,
-      rgba($primary-color, 0.6) 0%,
-      rgba($primary-color, 0.6) 50%,
+      rgba($primary-color, 0.25) 0%,
+      rgba($primary-color, 0.25) 50%,
       transparent 50%
     ),
     url(../img/contact-big.jpg);
@@ -18,8 +18,8 @@
   @include responsive(tab-hor) {
     background-image: linear-gradient(
         105deg,
-        rgba($primary-color, 0.6) 0%,
-        rgba($primary-color, 0.6) 50%,
+        rgba($primary-color, 0.25) 0%,
+        rgba($primary-color, 0.25) 50%,
         transparent 50%
       ),
       url(../img/contact-medium.jpg);
@@ -27,16 +27,16 @@
 
   @include responsive(tab-ver) {
     background-image: linear-gradient(
-        rgba($primary-color, 0.6) 0%,
-        rgba($primary-color, 0.6) 100%
+        rgba($primary-color, 0.25) 0%,
+        rgba($primary-color, 0.25) 100%
       ),
       url(../img/contact-medium.jpg);
   }
 
   @include responsive(phone) {
     background-image: linear-gradient(
-        rgba($primary-color, 0.6) 0%,
-        rgba($primary-color, 0.6) 100%
+        rgba($primary-color, 0.25) 0%,
+        rgba($primary-color, 0.25) 100%
       ),
       url(../img/contact-small.jpg);
   }
