@@ -1,4 +1,16 @@
 .header {
   height: 100vh;
   overflow: hidden;
+
+  @include responsive(tab-hor) {
+    height: 70rem;
+  }
+
+  @include responsive(tab-ver) {
+    height: 65rem;
+  }
+
+  @include responsive(phone) {
+    height: 60rem;
+  }
 }

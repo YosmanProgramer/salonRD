@@ -1,0 +1,84 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  @include responsive(tab-ver) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include responsive(phone) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  &__item {
+    position: relative;
+    border-radius: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  &__description {
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $white-color;
+    background-color: rgba($primary-color, 0.6);
+    transition: all 0.3s ease;
+
+    @include responsive(tab-hor) {
+      bottom: 0;
+      height: auto;
+      padding: 2rem 0;
+    }
+  }
+
+  &__tittle {
+    font-size: 3.5rem;
+    line-height: 1.2;
+
+    @include responsive(tab-hor) {
+      font-size: 2rem;
+    }
+
+    @include responsive(phone) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__price {
+    font-size: 2rem;
+
+    @include responsive(tab-hor) {
+      font-size: 1.5rem;
+    }
+
+    @include responsive(phone) {
+      font-size: 2rem;
+    }
+  }
+
+  &__item:hover &__description {
+    bottom: 0;
+  }
+
+  &__item:hover &__img {
+    transform: scale(1.1);
+
+    @include responsive(tab-hor) {
+      transform: scale(1);
+    }
+  }
+}

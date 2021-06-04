@@ -1,0 +1,16 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    &--6 {
+      grid-column: 1 / 3;
+      grid-row: 1 / 3;
+    }
+  }
+}

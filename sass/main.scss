@@ -11,12 +11,18 @@
 // components
 @import 'components/about';
 @import 'components/banner';
+@import 'components/bg-video';
 @import 'components/button';
+@import 'components/contact';
+@import 'components/gallery';
 @import 'components/information';
+@import 'components/products';
 @import 'components/services';
 @import 'components/slider';
 
 // layout
+@import 'layout/footer';
+@import 'layout/form';
 @import 'layout/header';
 @import 'layout/nav';
 

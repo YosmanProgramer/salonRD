@@ -19,6 +19,12 @@
   }
 }
 
-.section:not(:first-of-type) {
-  border-top: 2px solid $primary-color-light;
+.section {
+  border-bottom: 2px solid $primary-color-light;
+}
+
+.section-contact {
+  background-color: $primary-color;
+  &__container {
+  }
 }

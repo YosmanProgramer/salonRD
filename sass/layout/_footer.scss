@@ -1,0 +1,23 @@
+.footer {
+  padding: 4rem 0;
+  background-color: #333;
+
+  &__logo {
+    font-size: 3.5rem;
+    font-weight: 100;
+    font-family: 'Cookie', cursive;
+    text-transform: uppercase;
+    color: $white-color;
+    line-height: 1.2;
+
+    span {
+      display: block;
+      text-transform: lowercase;
+    }
+  }
+
+  &__copy {
+    font-size: 1.4rem;
+    color: $white-color;
+  }
+}
